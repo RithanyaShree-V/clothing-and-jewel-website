@@ -1,0 +1,11 @@
+.wishlist-page{padding:24px}
+.wishlist-page h2{font-size:28px;margin-bottom:16px}
+.empty{color:#666}
+.wishlist-grid{display:flex;flex-wrap:wrap;gap:12px}
+.wish-item{display:flex;align-items:center;background:#fff;padding:12px;border-radius:8px;box-shadow:0 1px 3px rgba(0,0,0,0.06);width:420px}
+.wish-image-wrapper{width:100px;height:100px;overflow:hidden;border-radius:6px;flex-shrink:0}
+.wish-image-wrapper img{width:100%;height:100%;object-fit:cover}
+.wish-info{padding-left:12px}
+.wish-name{font-weight:600}
+.wish-price{color:#c63b00;margin-top:6px}
+.remove-btn{margin-top:8px;background:#eee;border:0;padding:6px 10px;border-radius:6px;cursor:pointer}

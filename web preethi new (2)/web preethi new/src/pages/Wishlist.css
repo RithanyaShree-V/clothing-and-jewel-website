@@ -1,0 +1,238 @@
+.wishlist-page {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px 0;
+}
+
+.wishlist-page h2 {
+  font-family: 'Cormorant Garamond', 'Playfair Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', serif;
+  font-size: 44px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 12px;
+  letter-spacing: 0.5px;
+}
+
+.empty-wishlist {
+  text-align: center;
+  padding: 120px 20px;
+  background: linear-gradient(135deg, #faf8f5 0%, #f5f3f0 100%);
+  border-radius: 12px;
+  margin: 40px 0;
+}
+
+.empty-wishlist-icon {
+  font-size: 80px;
+  opacity: 0.3;
+  margin-bottom: 24px;
+}
+
+.empty-wishlist-text {
+  font-family: 'Cormorant Garamond', 'Playfair Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', serif;
+  font-size: 36px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 12px;
+  letter-spacing: 0.3px;
+}
+
+.empty-wishlist-subtext {
+  font-size: 16px;
+  color: #888;
+  margin-bottom: 40px;
+  line-height: 1.6;
+}
+
+.explore-button {
+  display: inline-block;
+  padding: 14px 40px;
+  background: linear-gradient(135deg, #d2691e 0%, #c2591e 100%);
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 12px rgba(210, 105, 30, 0.2);
+  letter-spacing: 0.5px;
+}
+
+.explore-button:hover {
+  background: linear-gradient(135deg, #b85d1a 0%, #a84f18 100%);
+  box-shadow: 0 6px 20px rgba(210, 105, 30, 0.3);
+  transform: translateY(-2px);
+}
+
+.wishlist-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 20px;
+  animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.wish-item {
+  display: grid;
+  grid-template-columns: 140px 1fr auto;
+  gap: 16px;
+  align-items: start;
+  background: #fff;
+  padding: 16px;
+  border-radius: 8px;
+  border: 1px solid #f0f0f0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.wish-item:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border-color: #e8e8e8;
+}
+
+.wish-image-wrapper {
+  width: 140px;
+  height: 170px;
+  overflow: hidden;
+  border-radius: 8px;
+  flex-shrink: 0;
+  background: #f5f5f5;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  grid-row: 1 / 3;
+}
+
+.wish-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.wish-item:hover .wish-image-wrapper img {
+  transform: scale(1.05);
+}
+
+.wish-info {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  justify-content: flex-start;
+}
+
+.wish-name {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1a1a1a;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', serif;
+  line-height: 1.4;
+}
+
+.wish-category {
+  font-size: 12px;
+  color: #999;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.wish-price {
+  font-size: 18px;
+  font-weight: 700;
+  color: #d2691e;
+  margin-top: 6px;
+}
+
+.remove-btn {
+  background: #f5f5f5;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  color: #e03a3a;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  align-self: flex-start;
+  margin-top: 8px;
+}
+
+.remove-btn:hover {
+  background: #ffebeb;
+  box-shadow: 0 2px 8px rgba(224, 58, 58, 0.15);
+}
+
+@media (max-width: 1024px) {
+  .wishlist-grid {
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .wishlist-page h2 {
+    font-size: 32px;
+  }
+
+  .wishlist-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .wish-item {
+    grid-template-columns: 120px 1fr auto;
+  }
+
+  .wish-image-wrapper {
+    width: 120px;
+    height: 150px;
+  }
+
+  .wish-name {
+    font-size: 16px;
+  }
+
+  .wish-price {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .wishlist-page h2 {
+    font-size: 28px;
+  }
+
+  .empty-wishlist {
+    padding: 60px 20px;
+  }
+
+  .empty-wishlist-text {
+    font-size: 28px;
+  }
+
+  .wish-item {
+    grid-template-columns: 100px 1fr;
+  }
+
+  .wish-image-wrapper {
+    width: 100px;
+    height: 130px;
+  }
+
+  .remove-btn {
+    grid-column: 1 / -1;
+    width: 100%;
+    text-align: center;
+    margin-top: 12px;
+  }
+}

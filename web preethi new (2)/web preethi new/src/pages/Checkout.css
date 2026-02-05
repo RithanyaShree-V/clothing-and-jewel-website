@@ -1,0 +1,209 @@
+.checkout {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.page-title {
+  font-family: 'Cormorant Garamond', 'Playfair Display', serif;
+  font-size: 42px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 12px;
+  letter-spacing: 0.3px;
+}
+.page-subtitle {
+  font-family: 'Lora', serif;
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 40px;
+}
+.empty-cart-message {
+  text-align: center;
+  padding: 60px 20px;
+  color: #666;
+}
+.checkout-content {
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  gap: 60px;
+  align-items: start;
+}
+.checkout-form {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 8px;
+  border: 1px solid #eee;
+}
+.form-group {
+  margin-bottom: 24px;
+}
+.form-group label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 8px;
+}
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 15px;
+  font-family: 'Lora', serif;
+  transition: border-color 0.2s;
+}
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #d2691e;
+}
+.form-group textarea {
+  resize: vertical;
+}
+.payment-methods-section {
+  margin-bottom: 24px;
+  margin-top: 32px;
+}
+.payment-methods-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 16px;
+}
+.payment-methods {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.payment-option {
+  display: flex;
+  align-items: center;
+  padding: 14px 16px;
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+  background-color: #fff;
+}
+.payment-option:hover {
+  border-color: #d2691e;
+  background-color: #fefaf6;
+}
+.payment-option.selected {
+  border-color: #d2691e;
+  background-color: #fef8f3;
+}
+.payment-option input[type="radio"] {
+  width: 18px;
+  height: 18px;
+  margin-right: 12px;
+  cursor: pointer;
+  accent-color: #d2691e;
+}
+.payment-label {
+  font-size: 15px;
+  font-weight: 500;
+  color: #333;
+  cursor: pointer;
+}
+.pay-button {
+  width: 100%;
+  padding: 14px 32px;
+  background-color: #d2691e;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  margin-top: 20px;
+}
+.pay-button:hover {
+  background-color: #b85d1a;
+}
+.checkout-summary {
+  background-color: #ffffff;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  padding: 24px;
+  position: sticky;
+  top: 20px;
+}
+.summary-title {
+  font-family: 'Cormorant Garamond', 'Playfair Display', serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 24px;
+  letter-spacing: 0.3px;
+}
+.summary-item {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eee;
+}
+.summary-item-image {
+  width: 80px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+.summary-item-info {
+  flex: 1;
+}
+.summary-item-name {
+  font-family: 'Cormorant Garamond', 'Playfair Display', serif;
+  font-size: 15px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 4px;
+  letter-spacing: 0.2px;
+}
+.summary-item-qty {
+  font-size: 14px;
+  color: #666;
+}
+.summary-item-price {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+}
+.summary-total {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+  margin-top: 20px;
+  border-top: 2px solid #333;
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+}
+.back-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #d2691e;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+.back-button:hover {
+  background-color: #b85d1a;
+}
+@media (max-width: 968px) {
+  .checkout-content {
+    grid-template-columns: 1fr;
+  }
+  .checkout-summary {
+    position: static;
+  }
+}

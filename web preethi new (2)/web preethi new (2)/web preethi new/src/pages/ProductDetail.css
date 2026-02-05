@@ -1,0 +1,128 @@
+.product-detail {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.back-button {
+  background: none;
+  border: none;
+  color: #d2691e;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 12px 0;
+  margin-bottom: 24px;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.back-button:hover {
+  color: #b85d1a;
+}
+
+.product-not-found {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.product-detail-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.product-image-section {
+  position: relative;
+}
+
+.detail-product-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.detail-new-badge {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  background-color: #d2691e;
+  color: white;
+  padding: 6px 16px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.product-info-section {
+  padding: 20px 0;
+}
+
+.detail-category {
+  font-size: 12px;
+  color: #999;
+  font-weight: 500;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+}
+
+.detail-name {
+  font-family: 'Cormorant Garamond', 'Playfair Display', serif;
+  font-size: 36px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 20px;
+  letter-spacing: 0.3px;
+}
+
+.detail-description {
+  font-family: 'Lora', serif;
+  font-size: 16px;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.detail-price {
+  font-size: 32px;
+  font-weight: 600;
+  color: #d2691e;
+  margin-bottom: 32px;
+}
+
+.add-to-cart-button {
+  width: 100%;
+  max-width: 300px;
+  padding: 14px 32px;
+  background-color: #d2691e;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.add-to-cart-button:hover {
+  background-color: #b85d1a;
+}
+
+.detail-actions{display:flex;align-items:center;gap:12px}
+.detail-wishlist-button{width:44px;height:44px;border-radius:6px;border:1px solid #eee;background:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:18px;color:#333}
+.detail-wishlist-button.active{background:#fff7f7;color:#e03a3a;border-color:#ffdede}
+
+
+@media (max-width: 768px) {
+  .product-detail-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .detail-name {
+    font-size: 28px;
+  }
+}
+
